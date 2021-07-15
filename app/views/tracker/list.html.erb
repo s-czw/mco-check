@@ -3,12 +3,12 @@
 	<div class="jumbotron">
 		<h1>Malaysia Boleh!</h1>
 	</div>
-	<p>Requesting data from <%= @url %></p>
+	<p class="text-muted">Source API: <%= @url %></p>
 	<br>
 	<div class="row">
 		<div class="col-3 mx-auto">
 			<div class="card text-center">
-				<div class="card-header">Today's Cases</div>
+				<div class="card-header">Latest Cases</div>
 				<div class="card-body">
 					<% if @cases.present? %>
 					<h4 class="card-title"><%= @cases %></h4>
