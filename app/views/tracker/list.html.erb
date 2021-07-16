@@ -10,11 +10,21 @@
 			<div class="card text-center">
 				<div class="card-header">Latest Cases</div>
 				<div class="card-body">
-					<% if @cases.present? %>
-					<h4 class="card-title"><%= @cases %></h4>
+					<h4 class="card-title">
+						<% if @cases.present? %>
+						<%= @cases %>
+						<% else %>
+						N/A
+						<% end %>
+					</h4>
+				</div>
+				<div class="card-footer text-muted">
+					<% if @date.present? %>
+					<%= @date.strftime("%d-%m-%Y") %>
+					<% else %>
+					no record for today yet
 					<% end %>
 				</div>
-				<div class="card-footer text-muted"><%= @date.strftime("%d-%m-%Y") %></div>
 			</div>
 		</div>
 	</div>
